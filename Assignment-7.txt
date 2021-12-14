@@ -1,0 +1,183 @@
+1.Find the area of circle and perimeter of circle
+import java.util.Scanner;
+
+public class Area{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter no: ");
+		double r = sc.nextDouble();
+		double perimeter = 2*Math.PI*r;
+
+		System.out.println("Perimeter of circle is: "+perimeter);
+		double circle = Math.PI*r*r;
+		System.out.println("Area of Circle: "+circle);
+	}
+}
+
+Output:
+Enter number: 8
+
+Perimeter of circel: 50.26
+Area of circle: 201.061
+
+2.Convert HashSet to ArrayList
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class HashSet{
+	public static void main(String[] args){
+		HashSet<String> h = new HashSet<>();
+		h.add("Akshu");
+		h.add("Mayuri");
+		ArrayList<String> s = new ArrayList(h);
+		
+		System.out.println("Elements are :"+h);
+	}
+}
+
+Output:
+Elements are: [Akshu, Mayuri]
+
+3.Sum the Digit
+import java.util.Scanner;
+
+public class Sum{
+	public static void main(String[] args){
+		int number, digit, sum = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter no: ");
+		number = sc.nextInt();
+		
+		while(number>0){
+			digit = number%10;
+			sum = sum+digit;
+			number =number/10;
+		}
+		System.out.println("Sum of digit is: "+sum);
+	}
+}
+
+Output:
+Enter no: 85
+Sum of digit is: 13
+
+4.Sum the arrays
+public class SumArray{
+	public static void main(String[] args){
+		int[] arr = new int[]{1,2,3,4,5,6};
+		int sum = 0;
+	for(int i=0;i<arr.length; i++){
+		sum =sum +arr[i];
+		}
+	System.out.println("Sum of Array is: "+sum);
+	}
+}
+
+Output:
+Sum of Array is: 21
+
+5.Area of Rectangle and Perimeter of Rectangle
+import java.util.Scanner;
+
+public class Rectangle{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter lenght: ");
+		int l = sc.nextInt();
+
+		System.out.println("Enter width: ");
+		int w = sc.nextInt();
+
+		double area = w*l;
+		Sytem.out.println("Area of rectangle is: "+area);
+
+		double perimeter = 2(w+l);
+		Ssytem.out.println("perimeter of rectangle is: "+perimeter);
+	}
+}
+
+Output:
+Enter length: 10
+Enter width: 15
+
+Area of Rectangle is: 150.0
+Perimeter of Rectangle is: 50.0
+
+6.Check the no. is even or not
+import java.util.Scanner;
+
+public class CheckEven{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no: ");
+
+		int num = sc.nextInt();
+
+		if(num%2==0){
+			System.out.println(num+"is even"):
+		}
+		else{
+			System.out.println(num+"not even");
+		}
+	}
+}
+
+Output:
+Enter the no: 88
+88 is even
+
+7.Check the year is leap or not
+import java.util.Scanner;
+
+public class leapyear{
+	public static void main(String[] args){
+		int year;
+		System.out.println("Enter the year");
+		Scanner sc = new Scanner(System.in);
+		year = sc.nextInt();
+
+		if(year%4==0){
+			System.out.println("Leap year");
+		}
+		else{
+			System.out.println("not leap year");
+		}
+	}
+}
+
+Output:
+Enter year: 2004
+leap year
+
+8.Division of 2 no
+import java.util.Scanner;
+
+public class Division{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 1st no: ");
+		int a = sc.nextInt();
+
+		System.out.println("Enter 2nd no: ");
+		int b = sc.nextInt();
+
+		System.out.println("The Division is: "+c);
+		sc.close();
+	}
+}
+
+Output:
+Enter 1st no: 10
+Enter 2nd no: 5
+
+The Division is: 2
+
+
+
+
+
+
+
+
+
+
