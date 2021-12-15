@@ -1,0 +1,199 @@
+1.public class CheckString {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the string 1: "); //taking input from user
+		String str1 = sc.nextLine();
+		System.out.println("Enter the string 2: "); //taking input from user
+		String str2 = sc.nextLine();
+		
+		//comparing string
+		if(str1.equals(str2)) {
+			System.out.println("Str1 is equal to str2");
+		}
+		else {
+			System.out.println("str1 is not equal to str2");
+		}
+	}
+}
+
+Output:
+Enter the string 1: 
+akshu
+Enter the string 2: 
+pawan
+str1 is not equal to str2
+
+2.public class IgnoreCases {
+	public static void main(String[] args) {
+		String str1 = "akanksha";
+		String str2 = "AkanksHa";
+		String str3 = "AKANKHSA";
+		
+		boolean result = str2.equalsIgnoreCase(str3);
+		
+		System.out.println("Str2 id equale to str1"+ result);
+		
+		boolean result2 = str2.equalsIgnoreCase(str3);
+		System.out.println("str2 is equal to str3"+result2);
+	}
+}
+
+Output:
+Str2 id equale to str1false
+str2 is equal to str3false
+
+3.import java.util.Scanner;
+
+public class StringToArray {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Entre string here: ");
+		String str = sc.nextLine();
+		
+		char[] ch = str.toCharArray();
+		
+		System.out.println(ch);
+		
+	}
+}
+
+Output:
+Entre string here: 
+akshu
+akshu
+
+4.import java.util.*;
+
+public class RemoveCharacter{
+    static String removeDuplicate(char str[], int n)
+    {
+        int index = 0;
+ 
+        for (int i = 0; i < n; i++)
+        {
+            int j;
+            for (j = 0; j < i; j++)
+            {
+                if (str[i] == str[j])
+                {
+                    break;
+                }
+            }
+            
+            if (j == i)
+            {
+                str[index++] = str[i];
+            }
+        }
+        return String.valueOf(Arrays.copyOf(str, index));
+    }
+
+    public static void main(String[] args)
+    {
+        char str[] = "akanksha".toCharArray();
+        int n = str.length;
+        System.out.println(removeDuplicate(str, n));
+    }
+}
+
+Output:
+aknsh
+
+5.public class MaxChar {
+	
+	static final int size = 256;
+    static char getMax(String str)
+    {
+        int count[] = new int[size];
+      
+        int len = str.length();
+        for (int i=0; i<len; i++)
+            count[str.charAt(i)]++;
+      
+        int max = -1;
+        char result = ' ';
+        
+        for (int i = 0; i < len; i++) {
+            if (max < count[str.charAt(i)]) {
+                max = count[str.charAt(i)];
+                result = str.charAt(i);
+            }
+        }
+      
+        return result;
+    }
+    
+    public static void main(String[] args)
+    {
+        String str = "akankshankshaiuhaisuc";
+        System.out.println("Max occurring character is " +
+                            getMax(str));
+    }
+}
+
+Output:
+Max occurring character is a
+
+6.import java.util.Scanner;
+
+public class Positing {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter here: ");
+		String str = sc.nextLine();
+		
+		int index1 = str.charAt(0);
+		int index2 = str.charAt(10);
+		
+		System.out.println("the charater at 0 position is: "+(char)index1);
+		System.out.println("the charater at 10 position is: "+(char)index2);
+	}
+}
+
+Output:
+Enter here: 
+abcdefghijk
+the charater at 0 position is: a
+the charater at 10 position is: k
+
+7.class Compare {
+	 
+	 public static void main(String[] args) {
+		    String s1 = "akshu";
+		    StringBuffer sb1 = new StringBuffer("akshu");
+		    String s2 = sb1.toString();
+		    System.out.println(s1.equals(s2));
+		  }
+	}
+
+Output:
+true
+
+8.public class Concate {
+	public static void main(String[] args) {
+		String s1 = "akshu";
+		String s2 = "shigvan";
+		
+		String str = s1 + s2;
+		
+		System.out.println("the concatinate is: "+str);
+	}
+}
+
+Output:
+the concatinate is: akshushigvan
+
+9.public class SubString {
+
+	public static void main(String[] args) {
+		String str = "the quick brown fox jumps over the lazy dog";
+		System.out.println(str.substring(10,26));
+		
+
+	}
+
+}
+
+Output:
+brown fox jumps 
